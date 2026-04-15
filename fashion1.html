@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louve Collection | Summer Coats</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #e67e22; /* The signature orange from your image */
+            --black: #1a1a1a;
+            --bg: #faf9f6;
+            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg);
+            color: var(--black);
+            overflow-x: hidden;
+        }
+
+        /* --- Navigation --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 30px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 5px;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--black);
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-left: 40px;
+            letter-spacing: 2px;
+        }
+
+        nav a.active { color: var(--accent); }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            padding: 0 8%;
+            position: relative;
+        }
+          .side-text {
+            position: fixed; right: 20px; top: 50%;
+            transform: translateY(-50%);
+            display: flex; flex-direction: column; gap: 44px;
+            z-index: 100;
+        }
+        .side-text span {
+            writing-mode: vertical-rl;
+            font-size: 8px; letter-spacing: 0.35em;
+            color: rgba(17,16,16,0.3);
+            font-weight: 700; text-transform: uppercase;
+        }
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            color: var(--accent);
+            line-height: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .collection-sub { font-size: 2.2rem; font-weight: 800; text-transform: lowercase; }
+        .size-tag { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.8rem; margin-bottom: 40px; opacity: 0.7; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 22px 60px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 2px;
+            box-shadow: 0 20px 40px rgba(230, 126, 34, 0.3);
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover { transform: translateY(-5px); box-shadow: 0 30px 60px rgba(235, 112, 4, 0.952); }
+
+        /* --- Image Styling --- */
+        .image-container { position: relative; display: flex; justify-content: center; }
+        .orange-circle {
+            position: absolute;
+            width: 400px; height: 400px;
+            background: var(--accent);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .model-img {
+            height: 400px; 
+            max-width: 600px;
+            width: 700px;
+            position: relative; z-index: 2;
+            filter: drop-shadow(0 20px 50px rgba(0,0,0,0.15));
+        }
+        @media (max-width: 1100px) {
+            .hero { grid-template-columns: 1fr; text-align: center; height: auto; padding-top: 150px; }
+            .vertical-labels { display: none; }
+            .orange-circle { width: 350px; height: 350px; }
+            footer { position: relative; flex-direction: column; align-items: center; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ORDER</div>
+        <nav>
+            <a href="#">Order</a>
+            <a href="#" class="active">Visit</a>
+            <a href="#">Website</a>
+            <a href="#" class="active">Black</a>
+            <a href="#">Fashion</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="side-text">
+            <span>New</span>
+            <span>New</span>
+            <span>New</span>
+            <span>New</span>
+        </div>
+        <section class="hero-content">
+            <h1>SUMMER COATS</h1>
+            <h2 class="collection-sub">louve collection</h2>
+            <p class="size-tag">size 56i</p>
+            
+            <div style="margin-bottom: 30px;">
+                <p style="font-weight:900; margin-bottom:10px;">NEW STOCK</p>
+                <div style="font-size: 1.5rem;">★★★★★</div>
+            </div>
+
+            <a href="#" class="cta-btn">EXPLORE THE COLLECTION</a>
+        </section>
+
+        <section class="image-container">
+            <div class="orange-circle"></div>
+            <img src="image 1.png" alt="Model" class="model-img">
+        </section>
+    </main>
+</body>
+</html>
