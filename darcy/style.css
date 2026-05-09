@@ -1,0 +1,260 @@
+
+#links{
+    color: white;
+}
+#links:hover{
+    color: #FFC107;
+    transition: all 0.3s ease-in-out;
+}
+#name{
+    color: white;
+    font-weight: bold;
+}
+#logo-area{
+    gap: 10px;
+}
+#links:active{
+    text-decoration: underline;
+}
+#header{
+    position: sticky;
+    /* position: fixed; */
+    gap: 10px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 40px 0;
+}
+
+.card-item{
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card1-image{
+    width: 100%;
+    height: 140px;
+    background-image: url(project/1.jpg);
+}
+.card2-image{
+    width: 100%;
+    height: 140px;
+    background-image: url(project/2.jpg);
+}
+.card3-image{
+    width: 100%;
+    height: 140px;
+    background-image: url(project/3.jpg);
+}
+
+.card-title{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #002D62;
+    padding: 12px 16px 0 16px;
+    margin: 0;
+}
+
+.card-text{
+    font-size: 0.85rem;
+    color: #555;
+    padding: 10px 16px 16px 16px;
+    flex-grow: 1;
+}
+.hero-banner {
+  /* Height fixed at 200px as requested, width spans 100% */
+  height: 300px;
+  width: 100%;
+  
+  /* Apply the Image + The Blue Gradient Overlay */
+  background: linear-gradient(
+      to right, 
+      rgba(2, 43, 89, 0.9) 0%,   /* Dark blue on left */
+      rgba(2, 43, 89, 0.4) 40%,  /* Fades out towards the middle */
+      transparent 100%          /* Fully transparent on the right */), 
+    url(chapel2.png); 
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center; /* Centers content vertically */
+  padding: 0 5%;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.banner-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.banner-text {
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  max-width: 400px;
+  line-height: 1.4;
+}
+
+.btn-discover {
+  display: inline-block;
+  background-color: #f1b400; /* The yellow/gold from the design */
+  color: #022b59;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+#latest{
+    color: #002D62;
+    font-size: medium;
+    font-weight: bold;
+    margin: 10px;
+
+}
+#ourpro{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22px, 1fr));
+    gap: 5px;
+    padding-left:2px ;
+    margin: 10px;
+
+}
+.program-container{
+    background-color:#0D47A1;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+.program-cardliterature{
+    background-color:  #EF6C00;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+.program-cardeconomics{
+    background-color: #00897B;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+.program-cardphilosophy{
+    background-color: #FBC02D;
+    color: white;
+    text-align:center;
+    border-radius: 5px;
+
+}
+.program-cardtechnical{
+    background-color: #673AB7 ;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+.program-cardco-curricular{
+    background-color:#7CB342 ;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+.btn-apply:hover{
+    display: inline-block;
+    background-color: #f1b400; /* The yellow/gold from the design */
+    color: #fff;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-apply{
+    display: inline-block;
+    background-color: #f1b400; /* The yellow/gold from the design */
+    color: #022b59;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+.hover{
+    text-align: end;
+    text-decoration: none;
+} 
+.icon-link .icon-link-hover{
+    color: #EF6C00;
+    text-decoration: none ;
+    font-weight: bold;
+}
+
+/* 1. The container must be relative so the badge stays inside it */
+.image-container {
+  position: relative;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+}
+
+/* 2. The Badge Style */
+.date-badge {
+  position: absolute;
+  top: 10px;    /* Distance from top */
+  left: 10px;   /* Distance from left */
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  min-width: 40px;
+}
+
+.date-badge .day {
+  font-size: 18px;
+  font-weight: bold;
+  color: #022b59; /* Dark blue from your design */
+  line-height: 1;
+}
+
+.date-badge .month {
+  font-size: 10px;
+  font-weight: bold;
+  color: #022b59;
+  text-transform: uppercase;
+}
+
+/* 3. Card styling for context */
+.news-card {
+  width: 300px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.news-content {
+  padding: 15px;
+}
